@@ -1,0 +1,13 @@
+.form {
+  text-align: center;
+}
+
+.form__button {
+  display: inline-block;
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.form__button > p {
+  margin: 0;
+}
