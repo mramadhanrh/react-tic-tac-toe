@@ -25,14 +25,7 @@ const handleResponseError = error => {
 axiosInstance.interceptors.response.use(response => response, handleResponseError);
 axiosInstance.interceptors.request.use(response => response, handleRequestError);
 
-const routes = {
-  exchangeRates: {
-    latest: 'latest'
-  },
-  openExchangeRates: {
-    currencies: 'currencies.json'
-  }
-};
+const routes = {};
 
 export default axiosInstance;
 export { routes, baseURL };
