@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import TictacButton from '../../../atoms/Buttons/TictacButton';
@@ -19,8 +19,11 @@ const TictacGrid = ({ row, col, turn, onChange }) => {
 
       return cloneState;
     });
-    onChange(gridArray);
   };
+
+  useEffect(() => {
+    onChange(gridArray);
+  }, [gridArray]);
 
   return (
     <div className={styles.container}>
